@@ -14,6 +14,16 @@ global class EnrollmentRoundupQueueable implements Queueable
     
     global void execute(QueueableContext context) 
     {   
+        // account recordtypes: HMS Clients (default), Escrow/Title
+        // contact recordtypes: TA Coordinators, Contacts for HMS (default)
+        ID IDAccountHMSClientsRecType = Schema.SObjectType.Account.getRecordTypeInfosByName().get('HMS Clients').getRecordTypeId();
+        ID IDAccountEscrowTitleRecType = Schema.SObjectType.Account.getRecordTypeInfosByName().get('Escrow/Title').getRecordTypeId();
+        ID IDContactTACoordinatorsRecType = Schema.SObjectType.Contact.getRecordTypeInfosByName().get('TA Coordinators').getRecordTypeId();
+        ID IDContactContactsHMSRecType = Schema.SObjectType.Contact.getRecordTypeInfosByName().get('Contacts for HMS').getRecordTypeId();
+        
+        Set<Id> setAgencyRecordTypes = new Set<Id>{IDAccountHMSClientsRecType, IDAccountEscrowTitleRecType};
+        Set<Id> setAgentRecordTypes = new Set<Id>{IDContactTACoordinatorsRecType, IDContactContactsHMSRecType};
+
         Enrollment__c currentEnrollment = listIncomingEnrollments.remove(0);
         
         Boolean bUpdateEnrollment;
@@ -40,10 +50,11 @@ global class EnrollmentRoundupQueueable implements Queueable
                 
                 findAccount = [SELECT ID, CCMID__c
                                   FROM Account
-                                  WHERE CCMID__c = :currentEnrollment.CCMID_of_Agency__c
+                                  WHERE (CCMID__c = :currentEnrollment.CCMID_of_Agency__c
                                   	OR (Name LIKE :strFirst2ofOfficeName
                                   	AND BillingStreet LIKE :strFirst3ofAddress
-                                  	AND BillingPostalcode LIKE :strFirst4ofZipcode)
+                                      AND BillingPostalcode LIKE :strFirst4ofZipcode))
+                                      AND RecordTypeId IN :setAgencyRecordTypes
                                   LIMIT 1];
             }catch(Exception exFindAccount){}
             
@@ -62,6 +73,8 @@ global class EnrollmentRoundupQueueable implements Queueable
                 newAccount.ShippingStreet = currentEnrollment.Agent_Address__c;
                 newAccount.ShippingPostalcode = currentEnrollment.Agent_Zip_Code__c;
                 newAccount.Created_from_Enrollment_FTP__c = true;
+                newAccount.RecordTypeId = IDAccountHMSClientsRecType;
+
                 try
                 {
                     upsert newAccount CCMID__c;
@@ -117,10 +130,11 @@ global class EnrollmentRoundupQueueable implements Queueable
                  
                 findAgent = [SELECT Id, CCMID__c, AccountId
                               FROM Contact
-                              WHERE CCMID__c = :currentEnrollment.CCMID_of_Agent__c
+                              WHERE (CCMID__c = :currentEnrollment.CCMID_of_Agent__c
                                	OR (FirstName LIKE :strInitial
                               	AND LastName = :currentEnrollment.Agent_Last_Name__c
-                               	AND AccountId = :updatedAgencyID)
+                                   AND AccountId = :updatedAgencyID))
+                                   AND RecordTypeId IN :setAgentRecordTypes
                               	LIMIT 1];
             }
             catch(Exception exFindContact){}
@@ -140,6 +154,7 @@ global class EnrollmentRoundupQueueable implements Queueable
                 newAgent.LastName = currentEnrollment.Agent_Last_Name__c;
                 newAgent.CCMID__c = currentEnrollment.CCMID_of_Agent__c;
                 newAgent.AccountId = updatedAgencyID;
+                newAgent.RecordTypeId = IDContactContactsHMSRecType;
                 
                 try
                 {
