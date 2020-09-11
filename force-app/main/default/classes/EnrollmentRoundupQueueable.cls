@@ -151,7 +151,7 @@ global class EnrollmentRoundupQueueable implements Queueable
                 
                 newAgent = new Contact();
                 newAgent.FirstName = currentEnrollment.Agent_First_Name__c;
-                 newAgent.LastName = currentEnrollment.Agent_Last_Name__c;
+                newAgent.LastName = currentEnrollment.Agent_Last_Name__c;
                 newAgent.CCMID__c = currentEnrollment.CCMID_of_Agent__c;
                 newAgent.AccountId = updatedAgencyID;
                 newAgent.RecordTypeId = IDContactContactsHMSRecType;
