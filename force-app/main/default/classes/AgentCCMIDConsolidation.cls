@@ -1,4 +1,4 @@
-global with sharing class AgentCCMIDConsolidation implements Database.Batchable<SObject>, Schedulable, Queueable 
+global with sharing class AgentCCMIDConsolidation implements Database.Batchable<SObject>, Schedulable 
 {
     /* Rackspace, David Berman, 11 September 2020
 
@@ -17,13 +17,6 @@ global with sharing class AgentCCMIDConsolidation implements Database.Batchable<
     ID IDContactContactsHMSRecType = Schema.SObjectType.Contact.getRecordTypeInfosByName().get('Contacts for HMS').getRecordTypeId();
         
     Set<Id> setAgentRecordTypes = new Set<Id>{IDContactTACoordinatorsRecType, IDContactContactsHMSRecType};
-
-    private List<Contact> listContactsForAsyncUpdate = new List<Contact>();
-
-    global AgentCCMIDConsolidation(List<Contact> records)
-    {
-        this.listContactsForAsyncUpdate = records;
-    }
 
     global AgentCCMIDConsolidation() 
     {
@@ -90,16 +83,10 @@ global with sharing class AgentCCMIDConsolidation implements Database.Batchable<
 
         if(mapContactUpdates.size() > 0)
         {
-            AgentCCMIDConsolidation updateContactsAsynchronously = new AgentCCMIDConsolidation(mapContactUpdates.values());
+            AgentCCMIDConsolidationQueueable updateContactsAsynchronously = new AgentCCMIDConsolidationQueueable(mapContactUpdates.values());
         	SYSTEM.enqueueJob( updateContactsAsynchronously );  
         }
 
-    }
-
-    global void execute(QueueableContext context) 
-    { 
-        // Asynchronous update of Contact records
-        Database.update(listContactsForAsyncUpdate, false);
     }
 
     global void execute(SchedulableContext sc) 
