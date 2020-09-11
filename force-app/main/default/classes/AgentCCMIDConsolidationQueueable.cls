@@ -10,6 +10,6 @@ global with sharing class AgentCCMIDConsolidationQueueable implements Queueable
     global void execute(QueueableContext context) 
     { 
         // Asynchronous update of Contact records
-        Database.update(listContactsForAsyncUpdate, false);
+        update listContactsForAsyncUpdate;
     }
 }

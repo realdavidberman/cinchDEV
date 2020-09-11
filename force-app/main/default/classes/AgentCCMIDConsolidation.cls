@@ -57,7 +57,7 @@ global with sharing class AgentCCMIDConsolidation implements Database.Batchable<
                 FROM Enrollment__c
                 WHERE Status__c = 'Success'
                     AND Agent__c IN :setContactIDs
-                ORDER BY Agent__c, Date_Ordered__c DESC]
+                ORDER BY Agent__c, Date_Ordered__c DESC, CCMID_of_Agent__c DESC]
             );
         }catch (Exception exEnrollments) {}
 
