@@ -113,19 +113,4 @@ global with sharing class AgentCCMIDConsolidation implements Database.Batchable<
 
     }
 
-    global ID defaultAgentTEST 
-    {
-        get 
-        {
-            if(defaultAgentTEST == null)
-            {
-                defaultAgentTEST = [SELECT ID 
-                                    FROM Contact 
-                                    WHERE LastName = :Label.Contact_Enrollment_CCMID_Not_Found_for_TEST LIMIT 1].Id;
-            }
-            return defaultAgentTEST;
-        }
-        set;
-    }
-
 }
