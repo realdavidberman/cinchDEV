@@ -66,22 +66,49 @@ global with sharing class AgentCCMIDConsolidation implements Database.Batchable<
         Integer iEnrollmentsListSize = listEnrollmentsForAgents.size();
         Integer j = 0;
         Map<Id, Contact> mapContactUpdates = new Map<Id, Contact>();
+        Map<Id, String> mapAgentMasterCCMIDs = new Map<Id, String>();
+
         while(j < iEnrollmentsListSize)
         {
             Enrollment__c ENR = listEnrollmentsForAgents[j];
             j++;
 
-            if(!mapContactUpdates.containsKey(ENR.Agent__c) && ENR.CCMID_of_Agent__c != ENR.CCMID_of_Agent_formula__c)
+            if(!mapAgentMasterCCMIDs.containsKey(ENR.Agent__c))
             {
-                Contact conUpdate = new Contact();
-                conUpdate.Id = ENR.Agent__c;
-                conUpdate.Previous_CCMID__c = ENR.CCMID_of_Agent_formula__c;
-                conUpdate.CCMID__c = ENR.CCMID_of_Agent__c;
+                if(ENR.CCMID_of_Agent__c != ENR.CCMID_of_Agent_formula__c)
+                {
+                    Contact conUpdate = new Contact();
+                    conUpdate.Id = ENR.Agent__c;
+                    conUpdate.Previous_CCMID__c = ENR.CCMID_of_Agent_formula__c;
+                    conUpdate.CCMID__c = ENR.CCMID_of_Agent__c;
 
-                mapContactUpdates.put(ENR.Agent__c, conUpdate);
+                    mapContactUpdates.put(ENR.Agent__c, conUpdate);
+  
+                }
+                mapAgentMasterCCMIDs.put(ENR.Agent__c, ENR.CCMID_of_Agent__c);
+                
             }
         }
 
+        j = 0; // second pass, to update Enrollments
+        List<Enrollment__c> listENRsForUpdate = new List<Enrollment__c>();
+        while(j < iEnrollmentsListSize)
+        {
+            Enrollment__c ENR = listEnrollmentsForAgents[j];
+            j++;
+
+            if(mapAgentMasterCCMIDs.containsKey(ENR.Agent__c))
+            {
+                if(ENR.CCMID_of_Agent__c != mapAgentMasterCCMIDs.get(ENR.Agent__c))
+                {
+                    ENR.CCMID_of_Agent__c = mapAgentMasterCCMIDs.get(ENR.Agent__c);
+                    listENRsForUpdate.add(ENR);
+                }
+            }
+        }
+
+        if(listENRsForUpdate.size() > 0)    update listENRsForUpdate;
+        
         if(mapContactUpdates.size() > 0)
         {
             AgentCCMIDConsolidationQueueable updateContactsAsynchronously = new AgentCCMIDConsolidationQueueable(mapContactUpdates.values());
