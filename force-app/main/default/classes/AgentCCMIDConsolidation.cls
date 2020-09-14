@@ -12,7 +12,7 @@ global with sharing class AgentCCMIDConsolidation implements Database.Batchable<
      */
 
     String query;
-    global static String defaultAgent = Label.Contact_Enrollment_CCMID_Not_Found;
+    global static String defaultAgentID = Label.Contact_Enrollment_CCMID_Not_Found;
     ID IDContactTACoordinatorsRecType = Schema.SObjectType.Contact.getRecordTypeInfosByName().get('TA Coordinators').getRecordTypeId();
     ID IDContactContactsHMSRecType = Schema.SObjectType.Contact.getRecordTypeInfosByName().get('Contacts for HMS').getRecordTypeId();
         
@@ -22,7 +22,8 @@ global with sharing class AgentCCMIDConsolidation implements Database.Batchable<
     {
         query = 'SELECT Id, CCMID__c, Previous_CCMID__c '+
                 'FROM Contact ' + 
-                'WHERE RecordTypeId IN :setAgentRecordTypes ';
+                'WHERE RecordTypeId IN :setAgentRecordTypes ' +
+                ' AND Id != :defaultAgentID ';
         query += Test.isRunningTest() ? ' LIMIT 10' : '';
     }
 
