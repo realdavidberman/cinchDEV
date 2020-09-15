@@ -89,7 +89,7 @@ global with sharing class AgentCCMIDConsolidation implements Database.Batchable<
                 
             }
         }
-
+        /*
         j = 0; // second pass, to update Enrollments
         List<Enrollment__c> listENRsForUpdate = new List<Enrollment__c>();
         while(j < iEnrollmentsListSize)
@@ -108,7 +108,7 @@ global with sharing class AgentCCMIDConsolidation implements Database.Batchable<
         }
 
         if(listENRsForUpdate.size() > 0)    update listENRsForUpdate;
-        
+        */
         if(mapContactUpdates.size() > 0)
         {
             AgentCCMIDConsolidationQueueable updateContactsAsynchronously = new AgentCCMIDConsolidationQueueable(mapContactUpdates.values());
