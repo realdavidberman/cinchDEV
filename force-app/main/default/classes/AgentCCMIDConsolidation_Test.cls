@@ -28,7 +28,7 @@ private  class AgentCCMIDConsolidation_Test
        testAgent.RecordTypeId = Schema.SObjectType.Contact.getRecordTypeInfosByName().get('Contacts for HMS').getRecordTypeId();
        testAgent.FirstName = 'ADRIENNE';
        testAgent.LastName = 'WAGNER';
-       testAgent.Email = 'robert.wagner@roadrunner.com';
+       testAgent.Email = 'adrienne.wagner@roadrunner.com';
        testAgent.CCMID__c = '142437000';
        testAgent.AccountId = testAgency.Id;
        insert testAgent;
@@ -45,6 +45,8 @@ private  class AgentCCMIDConsolidation_Test
        ENROlder.CCMID_of_Agent__c = '142437000';
        ENROlder.Agent_First_Name__c = 'ADRIENNE';
        ENROlder.Agent_Last_Name__c = 'WAGNER';
+       ENROlder.Status__c = 'Success';
+       ENROlder.Agent__c = testAgent.Id;
        insert ENROlder;
 
        Enrollment__c ENRNewer = new Enrollment__c();
@@ -59,6 +61,8 @@ private  class AgentCCMIDConsolidation_Test
        ENRNewer.CCMID_of_Agent__c = '142434064';
        ENRNewer.Agent_First_Name__c = 'ADRIENNE';
        ENRNewer.Agent_Last_Name__c = 'WAGNER';
+       ENRNewer.Status__c = 'Success';
+       ENRNewer.Agent__c = testAgent.Id;
        insert ENRNewer;
 
    }
