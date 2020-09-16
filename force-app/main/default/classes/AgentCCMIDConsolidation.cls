@@ -89,26 +89,7 @@ global with sharing class AgentCCMIDConsolidation implements Database.Batchable<
                 
             }
         }
-        /*
-        j = 0; // second pass, to update Enrollments
-        List<Enrollment__c> listENRsForUpdate = new List<Enrollment__c>();
-        while(j < iEnrollmentsListSize)
-        {
-            Enrollment__c ENR = listEnrollmentsForAgents[j];
-            j++;
-
-            if(mapAgentMasterCCMIDs.containsKey(ENR.Agent__c))
-            {
-                if(ENR.CCMID_of_Agent__c != mapAgentMasterCCMIDs.get(ENR.Agent__c))
-                {
-                    ENR.CCMID_of_Agent__c = mapAgentMasterCCMIDs.get(ENR.Agent__c);
-                    listENRsForUpdate.add(ENR);
-                }
-            }
-        }
-
-        if(listENRsForUpdate.size() > 0)    update listENRsForUpdate;
-        */
+        
         if(mapContactUpdates.size() > 0)
         {
             AgentCCMIDConsolidationQueueable updateContactsAsynchronously = new AgentCCMIDConsolidationQueueable(mapContactUpdates.values());
