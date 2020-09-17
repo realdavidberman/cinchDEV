@@ -74,6 +74,7 @@ global class EnrollmentRoundupQueueable implements Queueable
                 newAccount.ShippingPostalcode = currentEnrollment.Agent_Zip_Code__c;
                 newAccount.Created_from_Enrollment_FTP__c = true;
                 newAccount.RecordTypeId = IDAccountHMSClientsRecType;
+                newAccount.Account_Status__c = 'Active Client';
 
                 try
                 {
@@ -155,6 +156,7 @@ global class EnrollmentRoundupQueueable implements Queueable
                 newAgent.CCMID__c = currentEnrollment.CCMID_of_Agent__c;
                 newAgent.AccountId = updatedAgencyID;
                 newAgent.RecordTypeId = IDContactContactsHMSRecType;
+                newAgent.Contact_Status__c = 'Active Client';
                 
                 try
                 {
