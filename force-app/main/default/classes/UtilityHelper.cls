@@ -1,5 +1,18 @@
-public class UtilityHelper 
+public without sharing class UtilityHelper 
 {
+    public static List<String> getEmailAddresses(String strSource)
+    {
+        List<String> listEmails = new List<String>();
+        for(Email_Recipients__mdt cmdt : [SELECT Email_Address__c 
+                                            FROM Email_Recipients__mdt 
+                                            WHERE Source__c = :strSource])
+        {
+            listEmails.add(cmdt.Email_Address__c);
+        }    
+        
+        return listEmails;
+    }
+
 	public static Integer getRandomNumber(Integer size)
     {
         // return random number between 0 and <size>

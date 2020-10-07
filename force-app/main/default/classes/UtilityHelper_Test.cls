@@ -5,6 +5,7 @@ private class UtilityHelper_Test
     {
         Integer i = UtilityHelper.getRandomNumber(10);
         String sNow = UtilityHelper.getNowDateTimeString();
-        
+        List<String> listEmails = new List<String>();
+        listEmails = UtilityHelper.getEmailAddresses('AdminEnrollmentDupeChecker');
     }
 }
