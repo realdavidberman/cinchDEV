@@ -36,7 +36,7 @@ global without sharing class AdminEnrollmentDupeChecker implements Database.Batc
             String strWarrantyNumber = !Test.isRunningTest() ? enr.Name : '123456';
             enr.Warranty_Number__c = strWarrantyNumber;
             i++;
-            SYSTEM.DEBUG('+++++ enr: ' + enr);
+            //SYSTEM.DEBUG('+++++ enr: ' + enr);
         }
 
         List<Database.SaveResult> updateResults = Database.update(scope, false);
@@ -151,7 +151,7 @@ global without sharing class AdminEnrollmentDupeChecker implements Database.Batc
                 iDupesGlobalCount += listDupes.size();
             }
 
-            if(listRedo.size() > 0){    update listRedo; iRedoGlobalCount += listRedo.size();}
+            if(listRedo.size() > 0){    Database.update(listRedo, false); iRedoGlobalCount += listRedo.size();}
             
         } // if
     }

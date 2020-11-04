@@ -5,5 +5,9 @@
     "**/.sfdx": true
   },
   "git.ignoreLimitWarning": true,
-  "salesforcedx-vscode-core.show-cli-success-msg": false
+  "salesforcedx-vscode-core.show-cli-success-msg": false,
+  "salesforcedx-vscode-apex.enable-semantic-errors": true,
+  "salesforcedx-vscode-apex.enable-sobject-refresh-on-startup": true,
+  "salesforcedx-vscode-core.push-or-deploy-on-save.enabled": true,
+  "salesforcedx-vscode-core.retrieve-test-code-coverage": true
 }
