@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Other_Description_for_a_Value</fullName>
+    <active>true</active>
+    <description>When Type is Other, Other Description should have a value</description>
+    <errorConditionFormula>ispickval(Type__c, &quot;Other&quot;) &amp;&amp; IsBlank(Other_Description__c)</errorConditionFormula>
+    <errorDisplayField>Other_Description__c</errorDisplayField>
+    <errorMessage>Fill out Other Description when Type is Other</errorMessage>
+</ValidationRule>

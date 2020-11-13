@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_and_client_should_not_be_blank</fullName>
+    <active>true</active>
+    <errorConditionFormula>Or (AND(ISBLANK(Lead__c) ,ISBLANK( Client__c )),  AND (ISBLANK(Lead__c) ,ISBLANK( Client__c )))</errorConditionFormula>
+    <errorMessage>Either of them should be filled.(Not both of them)</errorMessage>
+</ValidationRule>

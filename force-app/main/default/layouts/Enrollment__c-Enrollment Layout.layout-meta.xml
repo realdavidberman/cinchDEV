@@ -256,6 +256,14 @@
                 <behavior>Edit</behavior>
                 <field>Buyer_Email__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Buyer_Date_Ordered__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Buyer_Date_Ordered_Date_Time__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -282,6 +290,14 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>SELLER_FIRST_NAME__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Seller_Date_Ordered__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Seller_Date_Ordered_Date_Time__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

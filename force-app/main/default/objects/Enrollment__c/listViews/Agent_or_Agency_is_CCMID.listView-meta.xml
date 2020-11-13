@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agent_or_Agency_is_CCMID</fullName>
+    <columns>NAME</columns>
+    <columns>Agency_or_Agent_is_CCMID__c</columns>
+    <columns>Agency_Matching_Method__c</columns>
+    <columns>Agent_Matching_Method__c</columns>
+    <columns>Failure_Message__c</columns>
+    <columns>Status__c</columns>
+    <columns>Agency_Office__c</columns>
+    <columns>Agent_Last_Name__c</columns>
+    <columns>Agent__c</columns>
+    <columns>Agency__c</columns>
+    <columns>Agent_Address__c</columns>
+    <columns>Agent_Zip_Code__c</columns>
+    <columns>Failure_Count__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Agency_or_Agent_is_CCMID__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Agent or Agency is CCMID</label>
+</ListView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Provide on/off switches for automations, such as triggers, Process Builders.  Add new fields for other triggers, Process Builders</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Automation Handler</label>
+    <visibility>Public</visibility>
+</CustomObject>

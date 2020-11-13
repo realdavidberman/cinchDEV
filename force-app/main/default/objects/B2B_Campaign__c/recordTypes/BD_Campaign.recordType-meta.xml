@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BD_Campaign</fullName>
+    <active>true</active>
+    <label>BD Campaign</label>
+    <picklistValues>
+        <picklist>Responsible_for_Acquisition__c</picklist>
+        <values>
+            <fullName>CCHS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Target_Audience__c</picklist>
+        <values>
+            <fullName>Homeowners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Renters</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

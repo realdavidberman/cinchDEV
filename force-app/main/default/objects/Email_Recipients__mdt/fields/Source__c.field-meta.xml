@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source__c</fullName>
+    <description>Which piece of automation does this originate from? Emails relating to what need to be sent?</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Which piece of automation does this originate from? Emails relating to what need to be sent?</inlineHelpText>
+    <label>Source</label>
+    <required>true</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AdminEnrollmentDupeChecker</fullName>
+                <default>true</default>
+                <label>AdminEnrollmentDupeChecker</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

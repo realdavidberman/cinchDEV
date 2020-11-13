@@ -32,7 +32,11 @@ public without sharing class EnrollmentHandler
         }
 
         if(listApplicableEnrollments.size() > 0)    
+        {
             handleNamesBasedOnType(listNew, listApplicableEnrollments);
+            handleDateOrderedBasedOnType(listNew, listApplicableEnrollments);
+        }
+            
     }
 
 
@@ -53,8 +57,12 @@ public without sharing class EnrollmentHandler
             i += 1;
         }
 
-        if(listApplicableEnrollments.size() > 0)    
+        if(listApplicableEnrollments.size() > 0) 
+        {
             handleNamesBasedOnType(listNew, listApplicableEnrollments);
+            handleDateOrderedBasedOnType(listNew, listApplicableEnrollments);
+        }   
+            
     }
 
 
@@ -75,6 +83,38 @@ public without sharing class EnrollmentHandler
                         enr.SELLER_FIRST_NAME__c = enr.NAME_FIRST__c;
                         enr.SELLER_LAST_NAME__c = enr.NAME_LAST__c;
                         enr.Seller_Name_Populated__c = SYSTEM.NOW();
+                        
+                    }
+                    when else
+                    {
+                        enr.BUYER_FIRST_NAME__c = enr.NAME_FIRST__c;
+                        enr.BUYER_LAST_NAME__c = enr.NAME_LAST__c;
+                        enr.Buyer_Name_Populated__c = SYSTEM.NOW();
+                    }
+                }
+            }
+            i += 1;
+        }
+    }
+
+    public static void handleDateOrderedBasedOnType(List<Enrollment__c> theTriggerList, List<Enrollment__c> theApplicableList)
+    {
+        Integer iListSize = theTriggerList.size();
+        Integer i = 0;
+
+        while(i < iListSize)
+        {
+            Enrollment__c enr = theTriggerList[i];
+            if(theApplicableList.contains( enr )) // it's a valid candidate, proceed
+            {
+                switch on enr.Warranty_Type__c
+                {
+                    when 'SHW'
+                    {
+                        enr.SELLER_FIRST_NAME__c = enr.NAME_FIRST__c;
+                        enr.SELLER_LAST_NAME__c = enr.NAME_LAST__c;
+                        enr.Seller_Name_Populated__c = SYSTEM.NOW();
+                        
                         
                     }
                     when else

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCMID_Match__c</fullName>
+    <description>Checks if Enrollment was matched to either the CCMID Agent or Office or both</description>
+    <externalId>false</externalId>
+    <formula>IF(AND(CONTAINS(Agency__r.Name , &apos;CCMID&apos;), CONTAINS(Agent__r.LastName, &apos;CCMID&apos;)), &apos;CCMID Agency &amp; Agent&apos;,
+IF(CONTAINS(Agency__r.Name, &apos;CCMID&apos;), &apos;CCMID Agency&apos;,
+IF(CONTAINS(Agent__r.LastName, &apos;CCMID&apos;), &apos;CCMID Agent&apos;, &apos;&apos;)))</formula>
+    <inlineHelpText>Checks if Enrollment was matched to either the CCMID Agent or Office or both</inlineHelpText>
+    <label>CCMID Match</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

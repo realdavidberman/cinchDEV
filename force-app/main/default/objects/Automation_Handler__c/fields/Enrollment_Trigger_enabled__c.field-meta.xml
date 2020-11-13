@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enrollment_Trigger_enabled__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Checked against in EnrollmentTrigger</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Checked against in EnrollmentTrigger</inlineHelpText>
+    <label>Enrollment Trigger enabled</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

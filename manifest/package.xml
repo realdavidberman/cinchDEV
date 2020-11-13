@@ -44,14 +44,17 @@
 	<members>User</members>
 	<members>Event</members>
 	<members>Opportunity</members>
+	<members>*</members>
 	<name>CustomObject</name>
 </types>
+
+
 
 <types>
 	<members>*</members>
 	<name>FlexiPage</name>
 </types>
-
+<!--
 <types>
 	<members>*</members>
 	<name>Flow</name>
@@ -66,7 +69,7 @@
 	<members>*</members>
 	<name>FlowDefinition</name>
 </types>
-
+-->
 <types>
 	<members>*</members>
 	<name>GlobalValueSet</name>
@@ -87,6 +90,6 @@
 	<name>StaticResource</name>
 </types>
 
-<version>43.0</version>
+<version>50.0</version>
 
 </Package>
