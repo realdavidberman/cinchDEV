@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <name>Update_Field_to_push_to_Marketing_true</name>
+        <label>Update Field to push to Marketing: true</label>
+        <locationX>470</locationX>
+        <locationY>122</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Update_Field_To_Push_To_Marketing_Cloud__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Contact</targetReference>
+        </connector>
+    </assignments>
+    <interviewLabel>Update to Contacts To Push Current Data To Marketing Cloud {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update to Contacts To Push Current Data To Marketing Cloud</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Update Marketing Cloud sync field</description>
+        <name>Update_Contact</name>
+        <label>Update Contact</label>
+        <locationX>661</locationX>
+        <locationY>122</locationY>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <startElementReference>Update_Field_to_push_to_Marketing_true</startElementReference>
+</Flow>
