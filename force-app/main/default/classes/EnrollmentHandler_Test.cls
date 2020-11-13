@@ -91,6 +91,7 @@ private with sharing class EnrollmentHandler_Test
 
         Test.startTest();
             enrAfterInsert.Warranty_Type__c = 'BCW';
+            enrAfterInsert.Date_Ordered__c = SYSTEM.TODAY();
             update enrAfterInsert;
         Test.stopTest();
 
@@ -135,6 +136,7 @@ private with sharing class EnrollmentHandler_Test
 
         Test.startTest();
             enrAfterInsert.Warranty_Type__c = 'SHW';
+            enrAfterInsert.Date_Ordered__c = SYSTEM.TODAY();
             update enrAfterInsert;
         Test.stopTest();
 
