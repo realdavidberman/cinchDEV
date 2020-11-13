@@ -82,14 +82,14 @@ public without sharing class EnrollmentHandler
                     {
                         enr.SELLER_FIRST_NAME__c = enr.NAME_FIRST__c;
                         enr.SELLER_LAST_NAME__c = enr.NAME_LAST__c;
-                        enr.Seller_Name_Populated__c = SYSTEM.NOW();
+                        enr.Seller_Name_Populated__c = enr.Seller_Name_Populated__c == null ? SYSTEM.NOW() : enr.Seller_Name_Populated__c;
                         
                     }
                     when else
                     {
                         enr.BUYER_FIRST_NAME__c = enr.NAME_FIRST__c;
                         enr.BUYER_LAST_NAME__c = enr.NAME_LAST__c;
-                        enr.Buyer_Name_Populated__c = SYSTEM.NOW();
+                        enr.Buyer_Name_Populated__c = enr.Buyer_Name_Populated__c == null ? SYSTEM.NOW() : enr.Buyer_Name_Populated__c;
                     }
                 }
             }
@@ -111,17 +111,14 @@ public without sharing class EnrollmentHandler
                 {
                     when 'SHW'
                     {
-                        enr.SELLER_FIRST_NAME__c = enr.NAME_FIRST__c;
-                        enr.SELLER_LAST_NAME__c = enr.NAME_LAST__c;
-                        enr.Seller_Name_Populated__c = SYSTEM.NOW();
-                        
+                        enr.Seller_Date_Ordered__c = enr.Date_Ordered__c;
+                        enr.Seller_Date_Ordered_Date_Time__c = enr.Seller_Date_Ordered_Date_Time__c == null ? SYSTEM.NOW() : enr.Seller_Date_Ordered_Date_Time__c;
                         
                     }
                     when else
                     {
-                        enr.BUYER_FIRST_NAME__c = enr.NAME_FIRST__c;
-                        enr.BUYER_LAST_NAME__c = enr.NAME_LAST__c;
-                        enr.Buyer_Name_Populated__c = SYSTEM.NOW();
+                        enr.Buyer_Date_Ordered__c = enr.Date_Ordered__c;
+                        enr.Buyer_Date_Ordered_Date_Time__c = enr.Buyer_Date_Ordered_Date_Time__c == null ? SYSTEM.NOW() : enr.Buyer_Date_Ordered_Date_Time__c;
                     }
                 }
             }
