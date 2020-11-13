@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HMS_Task_Opportunity</fullName>
+    <active>true</active>
+    <label>HMS Task - Opportunity</label>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Quote</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Additional sales pitch%2Fpresentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow up call with decision maker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow up call with other influencers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Social Media Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send agreement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send supporting materials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zoom Sales Presentation %28One on One%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Whitehawk_Task_Type__c</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Called Back</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conference Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow-Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Left Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meaningful Conversation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Received Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spoke with Gatekeeper</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

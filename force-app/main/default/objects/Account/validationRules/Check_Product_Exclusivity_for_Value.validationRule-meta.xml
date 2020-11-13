@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Product_Exclusivity_for_Value</fullName>
+    <active>true</active>
+    <description>When Product exclusivity is Other than Product Exclusivity Commentary should not be blank</description>
+    <errorConditionFormula>IsPickval(Product_Exclusivity__c, &quot;Other&quot;) &amp;&amp; IsBlank(Product_exclusivity_commentary__c)</errorConditionFormula>
+    <errorDisplayField>Product_exclusivity_commentary__c</errorDisplayField>
+    <errorMessage>Fill in Product Exclusivity Commentary when Product Exclusivity is Other.</errorMessage>
+</ValidationRule>

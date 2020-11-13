@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Account_NDA_Value</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (ISPICKVAL( StageName, &quot;Proposal&quot; ), Account.NDA__c= False )&amp;&amp;  RecordTypeId = &apos;0121H000001IdWK&apos;</errorConditionFormula>
+    <errorMessage>Ensure an NDA is in place and then Navigate to associated account and select NDA to be True on Account record to proceed to Proposal Stage</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Latest_Record_Created__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is just being used by process builder only. This roll up summary field helps to get the date value of latest opportunity.(Before deleting this field we need to take out this from process builder)</inlineHelpText>
+    <label>Latest Record Created</label>
+    <summarizedField>Opportunity.CreatedDate</summarizedField>
+    <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

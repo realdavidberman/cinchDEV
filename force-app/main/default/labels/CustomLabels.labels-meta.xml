@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Account_Enrollment_CCMID_Not_Found</fullName>
+        <categories>Account ID</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account Enrollment CCMID Not Found</shortDescription>
+        <value>0011H000027fmjnQAA</value>
+    </labels>
+    <labels>
+        <fullName>Account_Enrollment_CCMID_Not_Found_TEST</fullName>
+        <categories>Account</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account Enrollment CCMID Not Found TEST</shortDescription>
+        <value>Enrollment CCMID Not Found</value>
+    </labels>
+    <labels>
+        <fullName>Contact_Enrollment_CCMID_Not_Found</fullName>
+        <categories>Contact ID</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contact Enrollment CCMID Not Found</shortDescription>
+        <value>0031H00002JlGdiQAF</value>
+    </labels>
+    <labels>
+        <fullName>Contact_Enrollment_CCMID_Not_Found_for_TEST</fullName>
+        <categories>Contact</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contact Enrollment CCMID Not Found for TEST</shortDescription>
+        <value>CCMID Not Found</value>
+    </labels>
+    <labels>
+        <fullName>ProfileNameForPhotoURL</fullName>
+        <categories>HMS</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ProfileNameForPhotoURL</shortDescription>
+        <value>CHS Sales Base User - HMS</value>
+    </labels>
+</CustomLabels>

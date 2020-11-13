@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Executed_Checkbox</fullName>
+    <active>true</active>
+    <description>When Opportunity is closed Won, need to check contracted executed checkbox</description>
+    <errorConditionFormula>AND( ISPICKVAL(StageName, &quot;Closed Won&quot;) ,Contract_Executed__c = False ,  RecordTypeId = &apos;0121H000001IdWK&apos;)</errorConditionFormula>
+    <errorDisplayField>Contract_Executed__c</errorDisplayField>
+    <errorMessage>When Opportunity is closed Won, need to check contracted executed checkbox</errorMessage>
+</ValidationRule>

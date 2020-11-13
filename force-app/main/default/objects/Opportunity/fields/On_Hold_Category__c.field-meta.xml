@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>On_Hold_Category__c</fullName>
+    <description>Allows for an on-hold opportunity to be identified as being on-hold by Cinch (meaning we put it on hold) or on-hold due to Client Delay (meaning the client put the oppty on hold)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Opportunity must be On-Hold (50%) in order to select this field.
+
+1) &apos;Cinch On-Hold&apos; is an opportunity that we have determined is on hold. 
+2) &apos;Client Delay&apos; is an opportunity that the client has put on hold.</inlineHelpText>
+    <label>On Hold Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cinch On-Hold</fullName>
+                <default>false</default>
+                <label>Cinch On-Hold</label>
+            </value>
+            <value>
+                <fullName>Client Delay</fullName>
+                <default>false</default>
+                <label>Client Delay</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>On Hold</controllingFieldValue>
+            <valueName>Cinch On-Hold</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>On Hold</controllingFieldValue>
+            <valueName>Client Delay</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

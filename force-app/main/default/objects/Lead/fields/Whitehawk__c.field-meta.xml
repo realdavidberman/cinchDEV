@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Whitehawk__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check this box for Leads to be worked by Whitehawk.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this box for Leads to be worked by Whitehawk.</inlineHelpText>
+    <label>Whitehawk</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

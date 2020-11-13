@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Opt_In__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used to identify a contact that has actively consented to receiving our email communications.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This contact has actively consented to receiving our email communications.</inlineHelpText>
+    <label>Email Opt-In</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

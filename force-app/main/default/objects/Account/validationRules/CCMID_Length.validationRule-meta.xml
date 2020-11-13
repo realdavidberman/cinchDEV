@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCMID_Length</fullName>
+    <active>false</active>
+    <errorConditionFormula>LEN(CCMID__c) = 5 || LEN(CCMID__c) = 10</errorConditionFormula>
+    <errorDisplayField>CCMID__c</errorDisplayField>
+    <errorMessage>This field should be five characters or ten characters total.</errorMessage>
+</ValidationRule>

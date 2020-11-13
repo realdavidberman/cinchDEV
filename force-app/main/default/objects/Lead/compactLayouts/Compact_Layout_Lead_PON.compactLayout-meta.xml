@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Compact_Layout_Lead_PON</fullName>
+    <fields>Company</fields>
+    <fields>Address</fields>
+    <fields>Email</fields>
+    <fields>Phone</fields>
+    <fields>Website</fields>
+    <label>Compact Layout (Lead) - PON</label>
+</CompactLayout>

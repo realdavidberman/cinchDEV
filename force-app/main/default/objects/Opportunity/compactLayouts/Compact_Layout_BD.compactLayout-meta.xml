@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Compact_Layout_BD</fullName>
+    <fields>AccountId</fields>
+    <fields>Name</fields>
+    <fields>Probability</fields>
+    <fields>CloseDate</fields>
+    <fields>Amount</fields>
+    <fields>Line_of_Business__c</fields>
+    <fields>Business_Model__c</fields>
+    <fields>Branding__c</fields>
+    <label>Compact Layout - BD</label>
+</CompactLayout>

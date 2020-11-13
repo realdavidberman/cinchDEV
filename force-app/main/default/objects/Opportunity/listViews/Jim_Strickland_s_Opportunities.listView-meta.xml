@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Jim_Strickland_s_Opportunities</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Days_Since_Last_Activity__c</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>Estimated_Marketing_Start_Date__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.PROBABILITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Estimated_Annual_Gross_Sales__c</columns>
+    <columns>Projected_Opportunity_Lifetime_Revenue__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Business_Development_Opportunities</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>equals</operation>
+        <value>Strickland</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>On Hold,Contacted Decision Maker,Proposal,Agreement Requested,Negotiation</value>
+    </filters>
+    <label>Jim Strickland&apos;s Opportunities</label>
+</ListView>

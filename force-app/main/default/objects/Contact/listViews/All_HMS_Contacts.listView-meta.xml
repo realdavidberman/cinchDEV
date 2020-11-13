@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_HMS_Contacts</fullName>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>Contact_Status__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CCMID__c</columns>
+    <columns>Total_Sides_Units__c</columns>
+    <columns>Total_Active_Enrollments__c</columns>
+    <columns>Location_ID__c</columns>
+    <columns>ACCOUNT.ADDRESS2_STATE</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CONTACT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Contact.Contacts_for_HMS,Contact.TA_Coordinators</value>
+    </filters>
+    <label>HMS Contacts</label>
+    <sharedTo>
+        <roleAndSubordinates>HMS_Executive</roleAndSubordinates>
+    </sharedTo>
+</ListView>

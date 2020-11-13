@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Lost_Reason_is_required</fullName>
+    <active>true</active>
+    <description>Opportunity Stage is Closed Lost that Lost Reason is required</description>
+    <errorConditionFormula>AND( ISPICKVAL(  StageName  ,  &quot;Closed Lost&quot;),ISPICKVAL(Lost_Reason__c, &quot;&quot; ) )</errorConditionFormula>
+    <errorDisplayField>Lost_Reason__c</errorDisplayField>
+    <errorMessage>When an Opportunity Stage is Closed Lost, Lost Reason is required</errorMessage>
+</ValidationRule>

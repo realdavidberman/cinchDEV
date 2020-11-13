@@ -2,15 +2,18 @@ public without sharing class EnrollmentHandler
 {
     /*
      * SHW (seller warranty) will come in with a unique Warranty Number and the fields of 
-     * NAME_FIRST and NAME_LAST will be the **seller's name**
+     * NAME_FIRST and NAME_LAST and Date Ordered will be the **seller's name*
      *
      * After it is "Converted", it will then come in through the FTP in a future daily import with 
      * the same Warranty Number  but it will then be the Warranty Type of BCW and the same fields 
      * of NAME_FIRST and NAME_LAST in the FTP will now be the **buyer's name**
      *
-     * Based on the Warranty's Type (SHW vs BCW), the NAME_FIRST & NAME_LAST fields need to be
+     * Based on the Warranty's Type (SHW vs everything else), the NAME_FIRST & NAME_LAST fields need to be
      * mapped to the SELLER FIRST NAME, SELLER LAST NAME vs BUYER FIRST NAME, BUYER LAST NAME
      * fields respectively
+     * 
+     * Based on the Warranty's Type (SHW vs everything else), the Date Ordered field needs to be
+     * mapped to the Seller Date Ordered vs. Buyer Date Ordered fields respectively.
      */
 
     public static void processBeforeInserts(List<Enrollment__c> listNew)

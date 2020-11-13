@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_Not_Contact__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Use this if you do not want any email or other marketing communication to the account and it&apos;s contacts.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Use this if you do not want any email or other marketing communication to the account and it&apos;s contacts.</inlineHelpText>
+    <label>Do Not Contact</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

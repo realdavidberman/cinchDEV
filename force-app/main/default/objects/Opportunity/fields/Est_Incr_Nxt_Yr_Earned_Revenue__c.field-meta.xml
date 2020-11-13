@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Est_Incr_Nxt_Yr_Earned_Revenue__c</fullName>
+    <externalId>false</externalId>
+    <formula>One_Year_Earned_Revenue_Total__c *
+	Master_Client_Campaign__r.Estimated_of_Annual_Campaigns__c  *
+	0.5 * 
+	((365-Number_of_Marketing_Days_in_Year__c)/365)</formula>
+    <label>Projected Next Year Earned Revenue</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

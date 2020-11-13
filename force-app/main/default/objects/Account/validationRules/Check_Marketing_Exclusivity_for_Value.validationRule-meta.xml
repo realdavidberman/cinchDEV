@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Marketing_Exclusivity_for_Value</fullName>
+    <active>true</active>
+    <description>When Mutual permissive marketing is Other than Mutual Permissive Marketing exclusivity should not be blank</description>
+    <errorConditionFormula>IsPickval(Mutual_Permissive_Marketing__c, &quot;Other&quot;) &amp;&amp; IsBlank(Mutual_Permissive_Marketing_exclusivity__c)</errorConditionFormula>
+    <errorDisplayField>Product_exclusivity_commentary__c</errorDisplayField>
+    <errorMessage>Fill in Product Exclusivity Commentary when Product Exclusivity is Other.</errorMessage>
+</ValidationRule>

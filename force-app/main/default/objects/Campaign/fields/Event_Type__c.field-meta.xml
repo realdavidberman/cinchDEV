@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Event Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cocktail reception</fullName>
+                <default>false</default>
+                <label>Cocktail reception</label>
+            </value>
+            <value>
+                <fullName>Lunch and learn</fullName>
+                <default>false</default>
+                <label>Lunch and learn</label>
+            </value>
+            <value>
+                <fullName>Facts and snacks</fullName>
+                <default>false</default>
+                <label>Facts and snacks</label>
+            </value>
+            <value>
+                <fullName>Breakfast</fullName>
+                <default>false</default>
+                <label>Breakfast</label>
+            </value>
+            <value>
+                <fullName>Office presentation</fullName>
+                <default>false</default>
+                <label>Office presentation</label>
+            </value>
+            <value>
+                <fullName>Agent training</fullName>
+                <default>false</default>
+                <label>Agent training</label>
+            </value>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <label>General</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

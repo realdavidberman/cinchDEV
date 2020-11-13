@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BD_Event</fullName>
+    <active>true</active>
+    <label>BD Event</label>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Letter%2FQuote</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conferences and Trade Shows</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contract Negotiations meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Drop off flyers %28Mailbox flyers%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Industry association events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lunch and learns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New agent training</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New agent training %E2%80%93 %28group%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office hours</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office presentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office visit%2Fdrop by</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One on one sales presentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales pitch%2Fpresentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social media post</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Whitehawk_Task_Type__c</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Called Back</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complaint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conference Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow-Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Left Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meaningful Conversation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Received Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Research</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spoke with Gatekeeper</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

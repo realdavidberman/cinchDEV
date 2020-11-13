@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Whitehawk_Task_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Whitehawk Task Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Whitehawk_Task__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Call</fullName>
+                <default>false</default>
+                <label>Call</label>
+            </value>
+            <value>
+                <fullName>Called Back</fullName>
+                <default>false</default>
+                <label>Called Back</label>
+            </value>
+            <value>
+                <fullName>Complaint</fullName>
+                <default>false</default>
+                <label>Complaint</label>
+            </value>
+            <value>
+                <fullName>Conference Call</fullName>
+                <default>false</default>
+                <label>Conference Call</label>
+            </value>
+            <value>
+                <fullName>Follow-Up</fullName>
+                <default>false</default>
+                <label>Follow-Up</label>
+            </value>
+            <value>
+                <fullName>Left Message</fullName>
+                <default>false</default>
+                <label>Left Message</label>
+            </value>
+            <value>
+                <fullName>Meaningful Conversation</fullName>
+                <default>false</default>
+                <label>Meaningful Conversation</label>
+            </value>
+            <value>
+                <fullName>No Message</fullName>
+                <default>false</default>
+                <label>No Message</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Received Email</fullName>
+                <default>false</default>
+                <label>Received Email</label>
+            </value>
+            <value>
+                <fullName>Research</fullName>
+                <default>false</default>
+                <label>Research</label>
+            </value>
+            <value>
+                <fullName>Sent Email</fullName>
+                <default>false</default>
+                <label>Sent Email</label>
+            </value>
+            <value>
+                <fullName>Spoke with Gatekeeper</fullName>
+                <default>false</default>
+                <label>Spoke with Gatekeeper</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Called Back</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Complaint</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Conference Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Follow-Up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Left Message</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Meaningful Conversation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>No Message</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Received Email</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Research</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Sent Email</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>checked</controllingFieldValue>
+            <valueName>Spoke with Gatekeeper</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change_Number_of_Days_Marketing</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>Estimated_Marketing_Start_Date__c</columns>
+    <columns>Number_of_Marketing_Days_in_Year__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>New_Business_ARPU__c</columns>
+    <columns>New_Business_ARPU_2__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Business_Development_Opportunities</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Proposal,Agreement Requested,Negotiation</value>
+    </filters>
+    <label>Change Num of Days Marketing</label>
+</ListView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Projected_Next_Year_Earned_Revenue_HMS__c</fullName>
+    <externalId>false</externalId>
+    <formula>One_Year_Earned_Revenue__c *
+((365-Number_of_Marketing_Days_in_Year__c)/365)</formula>
+    <label>Projected Next Year Earned Revenue - HMS</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

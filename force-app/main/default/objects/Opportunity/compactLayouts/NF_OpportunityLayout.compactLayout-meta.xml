@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NF_OpportunityLayout</fullName>
+    <fields>Name</fields>
+    <fields>AccountId</fields>
+    <fields>CloseDate</fields>
+    <fields>Potential_Annual_Warranty_Volume__c</fields>
+    <label>NF_OpportunityLayout</label>
+</CompactLayout>

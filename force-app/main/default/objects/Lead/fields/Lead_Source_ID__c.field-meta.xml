@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Source_ID__c</fullName>
+    <description>Identifies the source of the lead (e.x. CES Trade Show Jan 2020)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This identifies the source of the lead.</inlineHelpText>
+    <label>Lead Source ID</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

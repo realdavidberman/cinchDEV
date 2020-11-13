@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Previous_CCMID__c</fullName>
+    <description>If the CCMID changes based on recent Enrollments, this stores the previous value of the CCMID, before the change</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If the CCMID changes based on recent Enrollments, this stores the previous value of the CCMID, before the change</inlineHelpText>
+    <label>Previous CCMID</label>
+    <length>30</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

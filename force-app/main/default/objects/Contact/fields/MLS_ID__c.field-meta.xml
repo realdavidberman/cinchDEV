@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MLS_ID__c</fullName>
+    <businessStatus>Active</businessStatus>
+    <description>This field comes from RDS and shows the multiple listing service the contact record came from.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field comes from RDS and shows the multiple listing service the contact record came from.</inlineHelpText>
+    <label>MLS ID</label>
+    <length>20</length>
+    <required>false</required>
+    <securityClassification>Public</securityClassification>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

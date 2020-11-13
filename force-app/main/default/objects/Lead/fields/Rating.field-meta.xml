@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rating</fullName>
+    <inlineHelpText>-Cold: Default, Prospect is identified
+-Warm: Contact made with prospect
+-Hot: Next step set with client, sizing opportunity</inlineHelpText>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+</CustomField>

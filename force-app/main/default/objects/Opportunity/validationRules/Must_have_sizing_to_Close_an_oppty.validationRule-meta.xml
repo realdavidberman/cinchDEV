@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Must_have_sizing_to_Close_an_oppty</fullName>
+    <active>true</active>
+    <description>Ensures an oppty is sized before being placed in closed status.</description>
+    <errorConditionFormula>AND (
+  OR  (ISPICKVAL(StageName, &quot;Closed Lost&quot;),
+       ISPICKVAL(StageName, &quot;Closed Won&quot;)),
+
+OR( ISBLANK( Projected_Opportunity_Lifetime_Revenue__c),Projected_Opportunity_Lifetime_Revenue__c=0), RecordTypeId = &apos;0121H000001IdWK&apos;
+
+)</errorConditionFormula>
+    <errorMessage>You must have sizing in your opportunity in order to close it.  Go back and verify that your opportunity has Annual Enrollments, Marketing Method, Length of Agreement, and Products.  If you&apos;ve added these, the Lifetime Rev will populate automatically.</errorMessage>
+</ValidationRule>
