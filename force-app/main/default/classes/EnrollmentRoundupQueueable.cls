@@ -1,5 +1,10 @@
 global class EnrollmentRoundupQueueable implements Queueable
 {
+    /* Rackspace, David Berman, 7 December 2020
+     * Added check against Custom Setting "Automation Handler", checkbox "Agency creation enabled",
+     * to determine if, should no agency be matched, a new agency/account record should be created
+     */
+    
     global String result;
     @TestVisible private static Boolean QUEUE = !Test.isRunningTest();
     global static String defaultAgent = Label.Contact_Enrollment_CCMID_Not_Found;
@@ -65,7 +70,7 @@ global class EnrollmentRoundupQueueable implements Queueable
                 if(!Test.isRunningTest())	strAgencyMappingMethod = findAccount.CCMID__c == currentEnrollment.CCMID_of_Agency__c ?	'CCMID' : 'Address & Zipcode';
             }
             
-            if(findAccount == null || Test.isRunningTest()) // create new Account
+            if((findAccount == null && Automation_Handler__c.getOrgDefaults().Agency_creation_enabled__c == true) || Test.isRunningTest()) // create new Account
             {
                 newAccount = new Account();
                 newAccount.Name = currentEnrollment.Agency_Office__c;
